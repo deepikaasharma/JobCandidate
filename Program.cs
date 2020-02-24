@@ -12,30 +12,55 @@ namespace JobCandidate
         {
             Console.WriteLine("How many Years of experience do you have?");
 
-            var Years = 0;
+            var Years = int.Parse(Console.ReadLine());
 
-            if (Years <= 0)
+            switch (Years)
             {
+                case 0:
                 Console.WriteLine("You are a Inexperienced");
-            }
-            else if (Years == 1)
-            {
-                Console.WriteLine("You are a Junior");
-            }
-            else if (Years == 2)
-            {
-                Console.WriteLine("You are an Intermediate");
-            }
-            else if (Years == 3) 
-            {
-                Console.WriteLine("You are Advanced");
-            }
-            else if (Years >= 4)
-            {
-                Console.WriteLine("You are Senior");
+             break;
+
+                case 1:
+                    Console.WriteLine("You are a Junior");
+                    break;
+
+                case 2:
+                    Console.WriteLine("You are an Intermediate");
+                    break;
+
+                case 3:
+                    Console.WriteLine("You are Advanced");
+                    break;
+
+                default:
+                    Console.WriteLine("You are a Senior");
+                    break;
+
             }
 
-            Console.ReadLine();
+            //Switch works better in this scenario than if else because too many cases here. 
+            //if (Years <= 0)
+            //{
+            //    Console.WriteLine("You are a Inexperienced");
+            //}
+            //else if (Years == 1)
+            //{
+            //    Console.WriteLine("You are a Junior");
+            //}
+            //else if (Years == 2)
+            //{
+            //    Console.WriteLine("You are an Intermediate");
+            //}
+            //else if (Years == 3) 
+            //{
+            //    Console.WriteLine("You are Advanced");
+            //}
+            //else 
+            //{
+            //    Console.WriteLine("You are Senior");
+            //}
+
+           
         }
     }
 }
